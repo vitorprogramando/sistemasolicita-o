@@ -1,0 +1,60 @@
+<!DOCTYPE html> 
+
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" href="img/icone.png">
+    <title>Login</title>
+    <link rel="stylesheet" href="style.css" />
+    <!-- Boxicons CSS -->
+    <link flex href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet" />
+    <script src="script.js" defer></script>
+  </head>
+  <body>
+    <div class="wrapper fadeInDown">
+      <div id="formContent">
+        <!-- Tabs Titles -->
+        <h2 class="active"> LOGIN</h2>
+        <!-- Icon -->
+        <div class="fadeIn first">
+          <img src="img/neurox.png" height="200px" width="200px"/>
+        </div>
+    
+        <!-- Login Form -->
+        <form>
+          <input type="text" id="login" class="fadeIn second" name="login" placeholder="Usuário">
+          <input type="password" id="senha" class="fadeIn third" name="login" placeholder="Senha">
+          <input type="submit" class="fadeIn fourth" value="Entrar" onclick="logar(); return false">
+        </form>
+    
+        <!-- Remind Passowrd -->
+        <div id="formFooter">
+          <a class="underlineHover" href="https://api.whatsapp.com/send?phone=5583999485660&text=Ol%C3%A1,%20Esqueci%20minha%20senha">Esqueci minha senha</a>
+        </div>
+    
+      </div>
+    </div>
+    <script>
+
+
+      function logar(){
+
+          var login = document.getElementById('login').value;
+          var senha = document.getElementById('senha').value;
+
+          if(login == "admin" && senha == "admin"){
+              alert('Sucesso');
+              location.href = "Solicitação/index.html";
+          }else{
+              alert('Usuario ou senha incorretos');
+          }
+
+      }
+
+  </script>
+
+    
+  </body>
+</html>

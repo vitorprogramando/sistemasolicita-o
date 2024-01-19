@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+	<html lang="pt-br">
+			<head> 
+				<meta charset=utf-8>
+				<meta http-equiv="X-UA-compatible" content= "IE-edge">
+				<meta name= "viewport" content="widht=device-width, initial-scale=1.0">
+				<link rel="stylesheet" href="style.css">
+				<link rel="icon" href="img/icone.png">
+				<title>Solicitação de Conserto</title>
+				<style>
+					*{
+						padding: 0;
+						margin: 0;
+					}
+
+					h4{
+						right:0;
+						color: rgb(0, 0, 0);
+						
+					}
+					
+					input{
+						height: 17px;
+						width: 20px;
+						border-radius: 30px;
+					}
+	
+					.dados {
+						padding: 20px;
+						background-color: rgb(3, 49, 88);
+						width: 100%;
+						height: 100%;
+			
+					}
+
+					.dados h4{
+						color: beige;
+					
+					}
+
+					.dados p {
+						color: black;
+						
+					}
+
+					.dados img    {
+    					border-top:15px;
+						border-color: rgb(255, 255, 255);
+						border-radius: 50%;
+						
+					
+					}
+			
+					.print {
+						display: none;
+						margin: 10px;
+						padding: 20px;
+						border: 1px solid black;
+						border-radius: 30px;
+						width: 900px;
+					}
+
+					.print h1 {
+						color: black;
+						border-bottom: 1px solid black;
+						margin-bottom: 20px;
+					
+					}
+
+					.print h3 {
+    					border-bottom: 1px solid black;
+    					margin-bottom: 20px;
+
+					}
+
+
+					.print h5{
+						padding: 10px;
+						border: 1px solid black;
+						border-radius: 20px;
+						display: inline-block;
+						margin-left: 10px;
+					}
+
+					.print h4 {
+    					text-align: right;
+   						margin-bottom: 20px;
+					}
+					.print center {
+   						border: solid 2px black;
+    					border-radius: 12px;
+    					height: 20px;
+					}
+
+					.assinatura{
+						border-top: 1px solid black;
+						text-align: center;
+
+					}
+
+					@media print {
+						.print {
+							display: block;
+						}
+
+						.dados {
+							display: none;
+						}
+
+					}
+
+					.dados button {
+        				color: rgb(250, 250, 250);
+    					position: relative;
+        				margin: 15px;
+        				padding: 20px 250px;
+        				letter-spacing: 1px;
+        				text-decoration: none;
+        				color: rgb(245, 245, 245);
+        				font-weight: 700;
+        				background: transparent;
+        				cursor: pointer;
+        				transition: ease-out 0.8;
+        				border: 1px solid #ffffff;
+        				border-radius: 15px;
+        				box-shadow: inset 0 0 0 0 #000000;
+
+    				}
+
+    					button:hover {
+        					color: rgb(240, 240, 243);
+        					box-shadow: inset 0 -100px 0 0 rgb(33, 102, 230);
+
+    				}
+
+    					button:active {
+        					transform: scale(0.9);
+    				}
+
+    					ul li{
+        					margin: 0 9px;
+        
+   	 						}
+
+    					ul{
+       					display:flex;
+        				flex-wrap: wrap;
+        				list-style: none;
+    				}
+					
+				</style>
+				
+			</head>
+			<body>
+				<center>
+				<div class="container" >
+				<div id="login"></div>
+				<div class="dados">
+					<center>
+					<a href="index.html">
+					<img src="img/neurox.png" border="15px" width="260px" height="250px ">
+					</a>
+					<br>
+					<br>
+					<br>
+					<h1>Sistema de Solicitação</h1>
+					</center>
+					<br>
+					<br>
+					<br>
+					<br>
+					<h4>Empresa:</h4>
+					<select name="NS" id="option">
+						<option value="Neurox" selected>Neurox</option>
+						<option value="Spinale" selected>Spinale</option>
+						<option value="Neuroperk" selected>Neuroperk</option>
+						<option value="" selected>Selecione a Empresa</option>
+					</select>
+					<br>
+					<br>
+					<br>
+					<br>
+					<br>
+					<h4>Responsável:</h4>
+					<input type="text" id="nome" placeholder="Nome do Responsável" /> <br /><br />
+					<br>
+					<br>
+					<br>
+					<h4>Selecione o carro:</h4>
+					<select name="NS" id="NS">
+						<hr />
+						<option value="01 - Saveiro SA-BA QSM-4789" selected>01 - Saveiro SA-BA QSM-4789</option>
+						<hr />
+						<option value="02 - Saveiro MA-AL QSH-5D53" selected>02 - Saveiro MA-AL QSH-5D53</option>
+						<hr />
+						<option value="03 - Saveiro FO-CE QFJ-8I42" selected>03 - Saveiro FO-CE QFJ-8I42</option>
+						<hr />
+						<option value="04 - Saveiro SA-BA QSB-2333" selected>04 - Saveiro SA-BA QSB-2333</option>
+						<hr />
+						<option value="05 - Saveiro AR-SE QSM-8E95" selected>05 - -Saveiro AR-SE QSM-8E95</option>
+						<hr />
+						<option value="06 - Saveiro MA-AL PDZ-8G95" selected>06 - Saveiro MA-AL PDZ-8G95</option>
+						<hr />
+						<option value="07 - Saveiro RE-PE QTT-3F49" selected>07 - Saveiro RE-PE QTT-3F49</option>
+						<hr />
+						<option value="08 - Saveiro JP-PB QFV-7A32" selected>08 - Saveiro JP-PB QFV-7A32</option>
+						<hr />
+						<option value="09 - Saveiro IT-BA QFV-7A62" selected>09 - Saveiro IT-BA QFV-7A62</option>
+						<hr />
+						<option value="10 - Saveiro FO-CE QFV-7B02" selected>10 - Saveiro FO-CE QFV-7B02</option>
+						<hr />
+						<option value="11 - Saveiro MA-AM QFW-6I92" selected>11 - Saveiro MA-AM QFW-6I92</option>
+						<hr />
+						<option value="12 - Saveiro JP-PB SKW-1C09" selected>12 - Saveiro JP-PB SKW-1C09</option>
+						<hr />
+						<option value="13 - Saveiro JP-PB SKY - 7D17" selected>13 - Saveiro JP-PB SKY - 7D17</option>
+						<hr />
+						<option value="" selected>Selecione o carro</option>
+					</select>
+					<br>
+					<br>
+					<br>
+					<br>
+					<br>
+					<h4>Tipo de Serviço:</h4>
+					<input type="text" id="referente" placeholder="Digite aqui os serviços a serem feitos" /> <br /><br />
+					<br>
+					<br>
+					<br>
+					<h4>Data:</h4>
+					<input type="date" id="data" /> <br /><br />
+					<br>
+					<br>
+					<br>
+					<h4>Descrição dos serviços e valores:</h4>
+					<textarea name="textarea" id="text" rows="10" cols="50" placeholder="Exemplo: Troca de Óleo = R$ 180,00"></textarea><br /><br />
+					<br>
+					<br>
+					<h4>Valor total R$:</h4>
+					<input type="number" step="0.01" id="valor" class="inputValor" placeholder="Digite o valor" /> <br /><br />
+					<br>
+					<h4><input type="checkbox" onclick="validarInput()" id="checkbox" value="ativar Botão">Confirmar o valor total do pedido</h4>
+					<br>
+					<br>
+					<br>
+					<button id="meuBotao" disabled onclick="gerarRecibo()">Gerar Solicitação</button>
+					
+				</div>
+			</center>
+				<div class="print">
+					<br>
+					<img src="img/printneurox.png" height="150px" width="17%">
+						<h1>Carro pertence a empresa - <span id="recibo_option"></span></h1>
+						<h4>CNPJ: 29.112.611/0001-03</h4>
+					<center>SOLICITAÇÃO DE CONSERTO</center>
+					<br>
+					<br>
+					<h3>Responsável pela Solicitação:<p><span id="recibo_nome"></p></span></h3>
+					<br>
+					<h3>Carro selecionado:<p><span id="recibo_NS"></p></span></span></h3>
+					<br>
+					<h3>Serviço a ser feito:<p><span id="recibo_referente"></p></span></h3></br >
+					<h3>Data: <span id="recibo_data"></span></h3>
+					<span id="text">
+					Descrição dos serviços e valores:
+					<h6><p><br><textarea name="textarea" id="recibo_text" rows="10" cols="50"></textarea></h6>
+					</span>
+					<strong>Valor total R$:</strong> <h5  id="recibo_valor"> 0,00</h5>
+					<h4>AV Julia Freire, 1200, João Pessoa-PB</h4>
+					<h2>Autorizo o serviço a ser feito no carro:</h2>
+					<br>
+					<br>
+					<br>
+					<br>
+					<div class="assinatura">Assinatura do Gestor Imediato</div>
+					<br>
+					<br>
+					<br>
+					<div class="assinatura">Assinatura do solicitante</div>
+					<br>
+				</div>
+			</div>
+				<script>
+							function validarInput() {
+							// Seleciona o input pelo nome da classe
+							var inputs = document.getElementsByClassName('inputValor');
+						
+							// Verifica se há pelo menos um input com a classe
+							if (inputs.length > 0) {
+							var valorInput = inputs[0].value;
+						
+							// Verifica se o valor está vazio
+							if (valorInput.trim() === '') {
+								alert('Por favor, insira o valor total antes de executar.');
+							} else {
+								// Exibe uma mensagem de confirmação com o valor inserido
+								alert('Valor total do orçamento: ' + valorInput); 
+							}
+							} else {
+							alert('Erro: Input não encontrado.');
+							}
+						}
+  
+						document.addEventListener('DOMContentLoaded', function () {
+						const checkbox = document.getElementById('checkbox');
+						const meuBotao = document.getElementById('meuBotao');
+
+						checkbox.addEventListener('change', function () {
+							meuBotao.disabled = !this.checked;
+						});
+						});
+
+					function gerarRecibo() {
+						document.getElementById('recibo_option').innerHTML = document.getElementById('option').value;
+						document.getElementById('recibo_nome').innerHTML = document.getElementById('nome').value;
+						document.getElementById('recibo_referente').innerHTML = document.getElementById('referente').value;
+						document.getElementById('recibo_NS').innerHTML = document.getElementById('NS').value;
+						document.getElementById('recibo_data').innerHTML = document.getElementById('data').value;
+						document.getElementById('recibo_text').innerHTML = document.getElementById('text').value;
+						document.getElementById('recibo_valor').innerHTML = parseFloat(document.getElementById('valor').value).toLocaleString('pt-br' , {minimumFractionDigits: 2});
+						window.print(); 
+					}
+				</script>
+			</body>
+			</html>
